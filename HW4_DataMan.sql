@@ -59,7 +59,7 @@ SELECT VendorID, VendorName, VendorState
 FROM VendorCopy
 ORDER BY VendorState
 
-6.	Write a DELETE statement for the VendorCopy table. Delete the vendors that are located in states from which no vendor has ever sent an invoice. (USE SELECT statement to verify data changes in the table before and after the modification).
+-- 6.	Write a DELETE statement for the VendorCopy table. Delete the vendors that are located in states from which no vendor has ever sent an invoice. (USE SELECT statement to verify data changes in the table before and after the modification).
 USE AP
 DELETE VendorCopy
 WHERE VendorID NOT IN(
