@@ -7,7 +7,7 @@ FROM Customers
 WHERE SUBSTRING(CustPhone, 2, 1) = 5
 ORDER BY CustomerFirst ASC
 
- 2.	Write a SELECT statement that returns the InvoiceNumber and balance due for every invoice with a non-zero balance and an InvoiceDueDate that’s less than 15 days from today. Use AP database.
+--  2.	Write a SELECT statement that returns the InvoiceNumber and balance due for every invoice with a non-zero balance and an InvoiceDueDate that’s less than 15 days from today. Use AP database.
 USE AP
 SELECT 
 	InvoiceID, 
