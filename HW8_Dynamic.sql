@@ -40,13 +40,10 @@ IF OBJECT_ID('VendorAddress') IS NOT NULL
 GO
 CREATE VIEW VendorAddress AS
 	SELECT 
-		VendorAddress1 + ', ' + VendorAddress2 + ', ' + VendorCity + ', ' + VendorState + ', ' + VendorZipCode + '.' AS AddressInfo,
-		*
+		VendorID,
+		VendorAddress1 + ', ' + ISNULL(VendorAddress2, ' ') + ', ' + VendorCity + ', ' + VendorState + ', ' + VendorZipCode + '.' AS AddressInfo
+		
 	FROM Vendors
-GO
-UPDATE VendorAddress
-SET VendorAddress2 = ' '
-WHERE VendorAddress2 IS NULL
 GO
 SELECT *
 FROM VendorAddress
